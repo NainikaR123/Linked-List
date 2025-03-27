@@ -92,7 +92,7 @@ int FindElement(int FindElem)
     temp= &data;
     while (temp->next != NULL)
     {
-        if (temp->next== FindElem)
+        if (temp->newnode== FindElem)
             break;
         else
         {
