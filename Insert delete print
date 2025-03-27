@@ -50,8 +50,11 @@ void deleteNode(Node** head, int key)
     free(temp);
 }
 
+int FindElement(int);
+
 int main() 
 {
+int findelem,findplc;
     Node* head = NULL;
     insertNode(&head, 10);
     insertNode(&head, 20);
@@ -71,4 +74,31 @@ int main()
     printf("Linked list after deletion: ");
     printList(head);
     return 0;
+
+printf(" Input the element to be searched : ");
+    scanf("%d", &FindElem);
+
+ FindPlc = FindElement(FindElem);
+
+if (FindPlc <= n)
+        printf(" Element found at node %d \n\n", FindPlc);
+    else
+        printf(" This element does not exist in the linked list.\n\n");
+}
+
+int FindElement(int FindElem)
+{
+    int ctr = 1;
+    temp= &data;
+    while (temp->next != NULL)
+    {
+        if (temp->newnode== FindElem)
+            break;
+        else
+        {
+            ctr++;
+            temp=temp->next;
+        }
+    }
+    return ctr; 
 }
